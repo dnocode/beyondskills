@@ -10,7 +10,7 @@ description: >
 
 The model tends to converge toward what is **statistically most frequent** in its training — which often coincides with what is most widespread, most mainstream, most about to be superseded. Frequency is not validity.
 
-This skill shifts the sampling point using **human compilers**: real figures whose system of thought is expanded into a philosophical profile and used as an active lens for generation and verification.
+This skill shifts the sampling point using **human compilers**: real figures whose system of thought is expanded into a philosophical profile and loaded as **pre-reasoning constraints** — before generation begins, not after. The profiles restrict the sampling space upfront. They are not post-hoc verifiers applied to an already-generated output. Generation happens *within* the constrained distribution. The final coherence check (Step 6) is a lightweight sanity check, not the primary mechanism.
 
 ### On Objective Verification
 
@@ -19,6 +19,30 @@ In technical domains — code, mathematics, engineering — an external compiler
 In non-technical domains — ethics, communication, writing, strategy, human relationships — **no such external compiler exists**. There is no machine that rejects a manipulative sentence the way a compiler rejects a syntax error. Objectivity in these domains does not live in a formal system. It lives in the accumulated humanity of people who have thought carefully, acted with integrity, and left a record of what they believed.
 
 This is why human compilers are not a stylistic preference in these domains. They are **the only verification system available**. The higher the domain's distance from technical measurability, the more mandatory the compilers become.
+
+---
+
+## Progress Display
+
+**At each step of activation, output a visual progress block.** Update it as each step completes. This is mandatory — it makes the constraint-loading process visible to the user.
+
+Format:
+
+```
+▸ LATERAL THINKING
+  [✓] Step 1 — Domain: [name] (technical|non-technical)
+  [✓] Step 2 — Risk: LOW|HIGH — compilers optional|mandatory
+  [✓] Step 3 — Compilers: [N] positive, [N] negative
+  [✓] Step 4 — Knowledge check: [name ✓/?] ...
+  [⋯] Step 5 — Building profiles:
+               · [Name] (positive)  [✓|⋯| ]
+               · [Name] (negative)  [✓|⋯| ]
+  [ ] Sampling constraints loaded — generation active
+```
+
+Legend: `[✓]` done · `[⋯]` in progress · `[ ]` pending · `[?]` needs user input
+
+**Output the block at the start of each step, updating status as you go.** When all steps complete, output the final block with all `[✓]` before generating any content. The user should be able to read the block and know exactly what constraints are active.
 
 ---
 
@@ -105,21 +129,21 @@ The **domain tensions** are the primary verification tool. When checking output,
 
 `STYLE` is secondary and descriptive only — it is never used to imitate the compiler's voice.
 
-These profiles become the **active system context** for the entire session.
+These profiles become the **active sampling constraints** for the entire session. They are loaded into context *before* any generation request. The model generates from within this constrained distribution — not freely and then corrected.
 
-### Step 6 — Generation with Verification
+### Step 6 — Constrained Generation + Final Coherence Check
 
-The goal is not imitation. The compilers are not style templates to reproduce — they are intellectual thresholds to clear. The output should be content that a positive compiler could accept, engage with, or debate on its merits. Not content that sounds like them. The question is never "would Feynman write this?" but "would Feynman throw this in the bin?"
+> **CRITICAL DISTINCTION**: The compilers are not applied *after* generating. They are loaded as context constraints *before* generation begins. The generation happens within the restricted sampling space they define. What follows is a final coherence check — not the primary mechanism.
 
-Before delivering any response, apply this internal cycle:
+The goal is not imitation. The compilers are intellectual thresholds that define the valid region of the output space. The output should be content that a positive compiler could accept, engage with, or debate on its merits. The question is never "would Feynman write this?" but "would Feynman throw this in the bin?"
 
-1. **Generate** the candidate response
-2. **Verify** against each positive compiler: *could this person engage with this content seriously — accept it, debate it, push back on details — without rejecting it as fundamentally dishonest, empty, or grottesque?*
-3. **Verify** against each negative compiler: *does this response resemble what I wanted to exclude — not in style, but in substance and intent?*
-4. **Non-technical domain check**: *does this output rely on "it sounds right" as its only ground? If so, re-run compiler verification more strictly.*
-5. **Correct** if needed, then respond
+**Final coherence check** (after generation, before delivering):
 
-If the output fails verification even after correction, say so explicitly rather than delivering compromised output. The compilers are not a filter to bypass — they are the only ground truth available.
+1. **Positive compiler scan**: *could this person engage with this seriously — accept it, debate it, push back on details — without rejecting it as fundamentally dishonest, empty, or grotesque?*
+2. **Negative compiler scan**: *does this resemble what I wanted to exclude — not in style, but in substance and intent?*
+3. **Non-technical domain check**: *does this rely on "it sounds right" as its only ground? If so, tighten the sampling constraints and regenerate.*
+
+If the output fails even after regeneration within tighter constraints, say so explicitly. The compilers are not a filter to bypass — they are the definition of the valid output space.
 
 ---
 
@@ -161,9 +185,11 @@ The skill builds a full philosophical profile for each of these real figures and
 
 The model contains both the mainstream version and rarer but more valid versions of almost every concept in its training. Compilers do not invent anything — they **restrict the sampling space** toward distributions already present but less probable by default.
 
-It is the same principle by which a compiler does not create correct code — it selects it by excluding what is invalid.
+**This restriction is preventive, not corrective.** The compiler profiles are loaded as context before reasoning begins. They narrow the distribution from which the model draws. This is not a post-hoc quality check applied to an already-generated output — it is a prior constraint that shapes what gets generated in the first place.
 
-In technical domains this selection is automatic. In non-technical domains it requires human reference — because objectivity in those domains does not exist in a formal system. It exists in the humanity of the people cited. The compilers are not decoration. They are the only available ground truth.
+The analogy to a code compiler is exact, but the direction matters: a compiler does not review finished code and suggest improvements. It defines what is valid *before* the code runs. The human compilers here work the same way — they define the valid sampling region, and generation stays within it.
+
+In technical domains this selection happens automatically via formal rules. In non-technical domains it requires human reference — because objectivity in those domains does not exist in a formal system. It exists in the humanity of the people cited. The compilers are not decoration. They are the only available ground truth — and they operate upfront.
 
 ---
 
