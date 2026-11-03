@@ -13,7 +13,8 @@ Una conversazione per **capire**, non per costruire. Il tema nasce dalle domande
 - Rispondi leggendo il codice e citando **file e riga**. Distingui sempre **verificato** (visto nel codice o nei dati), **ipotesi** (dedotto) e **non verificato**.
 - Per spiegare un meccanismo segui **un caso reale da cima a fondo**: chi agisce, cosa cambia nelle tabelle e negli stati, quali chiamate avvengono e in che ordine. Scene concrete, un passo alla volta; se l'utente dice di non aver capito, rifai la scena con altri esempi, non ripetere la spiegazione.
 - Le obiezioni si affrontano di petto: se l'utente ha ragione, dillo e correggi la spiegazione.
-- Tieni appunti aggiornati in chat: **Capito**, **Problemi** (con evidenza), **Idee**, **Decisioni**, **Domande aperte**.
+- Tieni appunti aggiornati: **Capito**, **Problemi** (con evidenza), **Idee**, **Decisioni**, **Domande aperte**.
+- **Salva man mano, non solo alla fine.** Dopo ogni decisione dell'utente e dopo ogni blocco di lavoro compiuto, crea o aggiorna il documento in `docs/explorations/` (nome provvisorio, per esempio `bozza-AAAAMMGG-HHMM.md`; a fine sessione lo rinomini col tema, dopo il via dell'utente). Gli appunti solo in chat si perdono quando la conversazione viene compattata o chiusa. Le decisioni si scrivono nel documento subito, con la data.
 
 ## Smistamento (mai automatico)
 
@@ -32,11 +33,14 @@ Le voci per la roadmap non si scrivono nella roadmap: vanno in fondo al document
 
 `docs/explorations/<tema-breve>.md` (o dove dice il `CLAUDE.md` del progetto), con intestazione (data, area, stato: aperta o smistata) e:
 
-1. **Come funziona oggi**: componenti, tabelle e stati, sequenza delle chiamate, il caso reale seguito, con riferimenti a file e riga.
-2. **Cosa non va o si può migliorare**: ogni punto con evidenza e gravità.
-3. **Passi proposti**: in ordine, con la dimensione di ciascuno, scritti in modo che una sessione di sviluppo possa trasformarli in progetto e piano.
-4. **Domande aperte.**
-5. **Voci per la roadmap.**
+1. **Decisioni** (in cima): ciò che l'utente ha deciso, con data, e ciò che ha escluso (perimetro, cose fuori, vincoli). È la parte che non deve mai andare persa.
+2. **Come funziona oggi**: componenti, tabelle e stati, sequenza delle chiamate, il caso reale seguito, con riferimenti a file e riga.
+3. **Cosa non va o si può migliorare**: ogni punto con evidenza e gravità.
+4. **Passi proposti**: in ordine, con la dimensione di ciascuno, scritti in modo che una sessione di sviluppo possa trasformarli in progetto e piano.
+5. **Domande aperte.**
+6. **Voci per la roadmap.**
+
+La roadmap riceve solo righe di rimando a questo documento: nessun dettaglio si perde, perché il dettaglio sta qui.
 
 Aggiorna l'indice `docs/explorations/README.md` (una riga: data, titolo, stato). Committa solo documentazione, nel ramo del worktree, e non fare push se l'utente non lo chiede.
 
