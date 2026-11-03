@@ -4,14 +4,14 @@ Il binario del flusso di sviluppo: una convenzione corta sopra superpowers per s
 
 ## Cosa risolve
 
-Nata dalle difficoltà reali del progetto KLEA (29 ottobre – 2 novembre 2026):
+Nata dalle difficoltà reali di un flusso di sviluppo basato su superpowers:
 
 | Difficoltà | Verdetto | Cosa fa dev-rail |
 |---|---|---|
 | Roadmap condivisa e registro del fatto | limite di superpowers | `docs/roadmap.md` (In progress / TODO / Idee, max 150 righe) + log mensile in `docs/log/` |
 | Esplorazione che intacca la sessione principale | limite parziale | worktree `explore-*` creato in automatico + hook che vieta le scritture fuori da `docs/explorations/` |
 
-Una voce vive in un solo file: quando si chiude passa dalla roadmap al log. Così non nascono due elenchi da tenere allineati, come successo in KLEA (roadmap a 454 voci, stato a oltre 3000 righe).
+Una voce vive in un solo file: quando si chiude passa dalla roadmap al log. Così non nascono due elenchi da tenere allineati, come succede quando roadmap e registro dello stato crescono in parallelo.
 
 ## Quando attivarla
 
