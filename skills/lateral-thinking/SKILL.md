@@ -1,5 +1,5 @@
 ---
-name: lateral-thinking
+name: beyondskills:lateral-thinking
 description: >
   Lateral thinking module that shifts model sampling away from mainstream, high-probability outputs toward valid but less probable patterns of thought. Activate ALWAYS when the user wants to avoid generic, obvious, or "default AI" output — especially in marketing, commercial communication, strategy, analysis, or any writing where mainstream tone would be grotesque or manipulative. Trigger when the user cites people as reference points ("write like X", "avoid the style of Y"), or says things like "not the usual stuff", "avoid classic marketing", "think differently", "not the obvious answer". Use as an injectable module on top of other skills or standalone.
 ---
