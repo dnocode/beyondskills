@@ -71,6 +71,11 @@ Così, se il sintomo ritorna, si trova subito cosa si era capito e cosa no. Senz
 
 ## 5. Esplorazione isolata (parallela alla sessione principale)
 
+**Un worktree si apre solo con «esploriamo» (o simili), mai con «chiudiamo», «salva», «finiamo» o «ok».** Queste parole chiudono. Se l'utente le dice:
+- e questa sessione è in un worktree `explore-*`: chiudi quell'esplorazione (punti 3 e 4);
+- e non è in un worktree ma ne esiste uno aperto da questa conversazione (`git worktree list`, ramo `worktree-explore-*`): chiudi quello, leggendo e scrivendo il documento con percorsi assoluti del suo worktree, senza crearne un altro;
+- e non c'è nessuna esplorazione da chiudere: chiedi in una riga cosa va chiuso. Non aprire nulla.
+
 Si apre una seconda sessione nel progetto e l'utente dice «esploriamo» (anche senza tema: nasce parlando). Tu, **senza chiedere nulla, nemmeno un nome**:
 1. Crei un worktree con `EnterWorktree`, `name: explore-AAAAMMGG-HHMM` (data e ora di adesso). Il prefisso `explore-` è ciò che attiva l'hook; il resto non conta. Il worktree ha memoria e cartella proprie: la sessione principale non è toccata.
 2. Esplori con le regole di `references/esplorazione.md` (leggile ora): sola lettura sul codice, appunti in chat. Salvi man mano nel documento (vedi il file): dopo ogni decisione e ogni blocco compiuto.
