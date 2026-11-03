@@ -11,9 +11,19 @@ Each skill in this repo is:
 - **Documented** — a plain-language README explains what it does, when to use it, and how
 - **Composable** — skills can be stacked or combined with other instructions
 
-## How to use a skill
+## Install as a plugin (recommended)
 
-1. Browse the [`skills/`](./skills/) directory and find one that fits your need
+Each skill is its own plugin, so you install only what you need. In Claude Code:
+
+```
+/plugin marketplace add dnocode/beyondskills
+/plugin install dev-rail@beyondskills
+/plugin install lateral-thinking@beyondskills
+```
+
+## How to use a skill by hand
+
+1. Browse the [`plugins/`](./plugins/) directory and find one that fits your need
 2. Open the skill's `README.md` to understand what it does
 3. Copy the contents of `SKILL.md`
 4. Paste it at the beginning of your Claude conversation (or as a system prompt)
@@ -24,8 +34,8 @@ That's it. No installation, no tools required.
 
 | Skill | Description |
 |-------|-------------|
-| [lateral-thinking](./skills/lateral-thinking/) | Shifts AI output away from mainstream patterns using human intellectual profiles as verification compilers |
-| [dev-rail](./skills/dev-rail/) | Standard dev workflow on top of superpowers: shared roadmap, monthly log, targeted tests, isolated exploration |
+| [lateral-thinking](./plugins/lateral-thinking/skills/lateral-thinking/) | Shifts AI output away from mainstream patterns using human intellectual profiles as verification compilers |
+| [dev-rail](./plugins/dev-rail/skills/dev-rail/) | Standard dev workflow on top of superpowers: shared roadmap, monthly log, isolated exploration |
 
 ## Contributing
 

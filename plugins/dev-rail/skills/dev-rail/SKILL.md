@@ -1,10 +1,13 @@
 ---
-name: beyondskills:dev-rail
+name: dev-rail
 description: >
   Binario standard per lo sviluppo software sopra superpowers: roadmap condivisa
   (In progress / TODO / Idee), log mensile di ciò che è fatto, sessioni di esplorazione
   isolate. Usala in ogni progetto di sviluppo quando si apre o si chiude un ramo di
-  lavoro, quando si aggiorna o si consulta la roadmap, o quando l'utente dice "dev-rail", "roadmap", "cosa abbiamo fatto", "cosa resta".
+  lavoro, quando si aggiorna o si consulta la roadmap, o quando l'utente dice "dev-rail",
+  "roadmap", "cosa abbiamo fatto", "cosa resta". Usala anche per le conversazioni di
+  esplorazione in sola lettura: "esploriamo", "exploration talk", "vorrei capire come
+  funziona", "fammi capire", "ispezioniamo".
 ---
 
 # dev-rail
@@ -63,7 +66,7 @@ Si scrivono solo cose verificate. Un file nuovo a ogni mese: il log non cresce m
 
 Si apre una seconda sessione nel progetto e l'utente dice «esploriamo» (anche senza tema: nasce parlando). Tu, **senza chiedere nulla, nemmeno un nome**:
 1. Crei un worktree con `EnterWorktree`, `name: explore-AAAAMMGG-HHMM` (data e ora di adesso). Il prefisso `explore-` è ciò che attiva l'hook; il resto non conta. Il worktree ha memoria e cartella proprie: la sessione principale non è toccata.
-2. Esplori con le regole di `exploration-talk`: sola lettura sul codice, appunti in chat. Non scrivi nulla finché non c'è un documento da salvare.
+2. Esplori con le regole di `references/esplorazione.md` (leggile ora): sola lettura sul codice, appunti in chat. Non scrivi nulla finché non c'è un documento da salvare.
 3. Quando l'utente dice «chiudiamo» o «salva», **proponi tu il nome** del documento dal tema emerso (`docs/explorations/<tema-breve>.md`) e scrivi dopo il suo via. Le voci per la roadmap **non** vanno nella roadmap: restano in fondo al documento, sezione «Voci per la roadmap», nel formato di sezione 2. Due sessioni sulla stessa roadmap andrebbero in conflitto.
 4. Committi il documento nel ramo del worktree, poi `ExitWorktree` con `keep`. Dici all'utente che per portarlo nel progetto basta «importa le esplorazioni» nella sessione principale. L'esplorazione non importa mai da sola: modificherebbe il progetto principale mentre vi si lavora.
 

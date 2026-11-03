@@ -1,0 +1,7 @@
+{
+  "name": "lateral-thinking",
+  "description": "Shifts AI output away from mainstream patterns using human intellectual profiles as verification compilers",
+  "version": "0.1.0",
+  "author": { "name": "dnocode" },
+  "repository": "https://github.com/dnocode/beyondskills"
+}

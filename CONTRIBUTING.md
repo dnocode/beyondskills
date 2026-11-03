@@ -2,14 +2,18 @@
 
 ## Adding a new skill
 
-Each skill lives in its own directory under `skills/`. The minimum structure is:
+Each skill is its own plugin under `plugins/`, so it can be installed on its own. The minimum structure is:
 
 ```
-skills/
+plugins/
 └── your-skill-name/
-    ├── SKILL.md       ← instructions for the AI
-    └── README.md      ← explanation for humans
+    ├── .claude-plugin/plugin.json   ← plugin manifest (name = skill name)
+    └── skills/your-skill-name/
+        ├── SKILL.md                 ← instructions for the AI
+        └── README.md                ← explanation for humans
 ```
+
+Then add the plugin to `.claude-plugin/marketplace.json` (`"source": "./plugins/your-skill-name"`) and run `claude plugin validate .`.
 
 Optional: add a `references/` subdirectory for supporting files (examples, templates, domain guides).
 
