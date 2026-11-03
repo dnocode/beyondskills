@@ -25,6 +25,7 @@ That's it. No installation, no tools required.
 | Skill | Description |
 |-------|-------------|
 | [lateral-thinking](./skills/lateral-thinking/) | Shifts AI output away from mainstream patterns using human intellectual profiles as verification compilers |
+| [dev-rail](./skills/dev-rail/) | Standard dev workflow on top of superpowers: shared roadmap, monthly log, targeted tests, isolated exploration |
 
 ## Contributing
 
