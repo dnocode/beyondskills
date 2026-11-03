@@ -56,9 +56,16 @@ Se i file non esistono, proponi di crearli. Le regole entrano nel `CLAUDE.md` de
 ```
 Si scrivono solo cose verificate. Un file nuovo a ogni mese: il log non cresce mai oltre un mese.
 
+**Un bug corretto lascia sempre una traccia nel log**, anche se la correzione è di una riga:
+```
+- AAAA-MM-GG **Bug: sintomo breve**: causa (verificata | ipotesi). Correzione: cosa cambia. Ramo/commit. Provato: dal vivo | solo test | no. Rimando: docs/explorations/bug.md
+```
+Così, se il sintomo ritorna, si trova subito cosa si era capito e cosa no. Senza dati di terzi, come ovunque.
+
 ## 4. Quando si aggiorna
 
 - **Chiusura di un ramo** (obbligatorio, prima dell'unione): le voci chiuse passano dalla roadmap al log; ciò che è emerso entra in **Idee** con una riga di contesto. Lo fa la sessione che ha fatto il lavoro, mai quella di esplorazione.
+- **Chiusura di un bug**: la riga nel log si scrive quando la correzione è unita, non prima. Se la causa è solo un'ipotesi o la correzione non è provata dal vivo, nella roadmap resta una voce **DA APPROFONDIRE** con cosa controllare dopo il rilascio; si chiude (e si aggiorna la riga del log) quando l'esito è visto.
 - **Smistamento di un'esplorazione**: la roadmap riceve righe di rimando dopo il via dell'utente.
 - **Cambio di decisione**: la voce si aggiorna, con la data.
 

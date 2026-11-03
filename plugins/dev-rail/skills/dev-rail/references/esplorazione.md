@@ -16,6 +16,19 @@ Una conversazione per **capire**, non per costruire. Il tema nasce dalle domande
 - Tieni appunti aggiornati: **Capito**, **Problemi** (con evidenza), **Idee**, **Decisioni**, **Domande aperte**.
 - **Salva man mano, non solo alla fine.** Dopo ogni decisione dell'utente e dopo ogni blocco di lavoro compiuto, crea o aggiorna il documento in `docs/explorations/` (nome provvisorio, per esempio `bozza-AAAAMMGG-HHMM.md`; a fine sessione lo rinomini col tema, dopo il via dell'utente). Gli appunti solo in chat si perdono quando la conversazione viene compattata o chiusa. Le decisioni si scrivono nel documento subito, con la data.
 
+## Esplorare un bug
+
+Capire la causa di un bug è un uso normale dell'esplorazione: si legge codice, log e dati, anche di produzione, e si scrive la diagnosi. **La correzione no**: parte dopo, in una sessione di lavoro, su un ramo suo creato da `main` (mai sul ramo che l'utente ha aperto nella cartella principale).
+
+- **Dati di produzione**: solo `SELECT`, mirate (poche colonne, `LIMIT`). Se il sistema dei permessi blocca la lettura, non aggirarlo: di' all'utente cosa vuoi leggere e perché, e aspetta il suo via. Nel documento e in chat: dei numeri e dei nomi solo le ultime quattro cifre o «cliente A».
+- **Documento del bug** (al posto di «Come funziona oggi» e «Cosa non va»): **Sintomo** (cosa fa, cosa dovrebbe fare, dove si è visto), **Cronologia** (ora per ora, solo ciò che è verificato), **Causa** (verificata / ipotesi / non verificata), **Cosa non ho verificato**, **Correzione proposta** (con test che oggi fallirebbe), **Difetti collaterali** (sono voci a parte).
+- Se la causa non è verificata, dillo anche nel titolo della voce per la roadmap, e proponi come verificarla dopo il rilascio (per esempio un log che oggi manca).
+- Un difetto che non è la causa di questo bug va in una voce propria (di solito Idee), non dentro la correzione.
+
+## Non perdere l'esplorazione
+
+Il worktree e il ramo `explore-*` non si rimuovono, né da te né con `ExitWorktree` in modalità remove, finché la sessione principale non ha importato il documento e l'utente non dice di toglierli. Se il worktree manca ma i commit esistono (`git reflog`, `git fsck --lost-found`), prima di tutto dagli un ramo (`git branch explore/<tema> <commit>`) e avvisa l'utente.
+
 ## Smistamento (mai automatico)
 
 Quando l'utente dice «chiudiamo» o «salva», o dopo un blocco di lavoro compiuto, proponi: «finora: N cose capite, N problemi, N idee: le smisto?». Per ogni elemento proponi una destinazione e **aspetta la conferma**:
