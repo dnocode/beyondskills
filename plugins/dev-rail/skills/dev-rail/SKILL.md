@@ -5,7 +5,8 @@ description: >
   (In progress / TODO / Idee), log mensile di ciò che è fatto, sessioni di esplorazione
   isolate. Usala in ogni progetto di sviluppo quando si apre o si chiude un ramo di
   lavoro, quando si aggiorna o si consulta la roadmap, o quando l'utente dice "dev-rail",
-  "roadmap", "cosa abbiamo fatto", "cosa resta". Usala anche per le conversazioni di
+  "roadmap", "cosa abbiamo fatto", "cosa resta", "mostrami la roadmap", "mettilo in
+  roadmap", "inserisci un bug", "a che punto siamo", "stato". Usala anche per le conversazioni di
   esplorazione in sola lettura: "esploriamo", "exploration talk", "vorrei capire come
   funziona", "fammi capire", "ispezioniamo".
 ---
@@ -68,6 +69,15 @@ Così, se il sintomo ritorna, si trova subito cosa si era capito e cosa no. Senz
 - **Chiusura di un bug**: la riga nel log si scrive quando la correzione è unita, non prima. Se la causa è solo un'ipotesi o la correzione non è provata dal vivo, nella roadmap resta una voce **DA APPROFONDIRE** con cosa controllare dopo il rilascio; si chiude (e si aggiorna la riga del log) quando l'esito è visto.
 - **Smistamento di un'esplorazione**: la roadmap riceve righe di rimando dopo il via dell'utente.
 - **Cambio di decisione**: la voce si aggiorna, con la data.
+- **Nessuna voce non richiesta**: in qualunque sessione, la roadmap riceve solo le voci che l'utente ha chiesto. Se ne emerge un'altra, proponi la riga e aspetta il via.
+
+### «Stato» («a che punto siamo», «mostrami la roadmap»)
+Solo lettura. Mostra, in questo ordine, e chiedi prima di cambiare o rimuovere qualunque cosa:
+1. la roadmap (In progress, TODO, Idee) in forma breve;
+2. le esplorazioni da importare: `git worktree list` per i `explore-*` e `git log HEAD..<ramo>`;
+3. i rami con lavoro non unito (`git branch --no-merged <base>`) e quelli già uniti da cancellare (`git branch --merged <base>`);
+4. i commit locali non pubblicati (`git log @{u}..`);
+5. le voci che dicono «non provato dal vivo».
 
 ## 5. Esplorazione isolata (parallela alla sessione principale)
 
