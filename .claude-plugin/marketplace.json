@@ -6,7 +6,7 @@
     {
       "name": "dev-rail",
       "description": "Standard dev workflow on top of superpowers: shared roadmap, monthly log, isolated exploration",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "source": "./plugins/dev-rail"
     },
     {

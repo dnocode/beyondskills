@@ -8,7 +8,8 @@ description: >
   "roadmap", "cosa abbiamo fatto", "cosa resta", "mostrami la roadmap", "mettilo in
   roadmap", "inserisci un bug", "a che punto siamo", "stato". Usala anche per le conversazioni di
   esplorazione in sola lettura: "esploriamo", "exploration talk", "vorrei capire come
-  funziona", "fammi capire", "ispezioniamo".
+  funziona", "fammi capire", "ispezioniamo". E per fermarsi e ripartire: "interrompiamo",
+  "sono stanco", "continuiamo domani", "riprendi l'esplorazione".
 ---
 
 # dev-rail
@@ -86,6 +87,15 @@ Solo lettura. Mostra, in questo ordine, e chiedi prima di cambiare o rimuovere q
 - e non è in un worktree ma ne esiste uno aperto da questa conversazione (`git worktree list`, ramo `worktree-explore-*`): chiudi quello, leggendo e scrivendo il documento con percorsi assoluti del suo worktree, senza crearne un altro;
 - e non c'è nessuna esplorazione da chiudere: chiedi in una riga cosa va chiuso. Non aprire nulla.
 
+**Interrompere** («interrompiamo», «sono stanco», «continuiamo domani», «pausa»): non è una chiusura, il documento resta una bozza. Tu:
+1. Salvi tutto nel documento, anche ciò che era solo in chat. Aggiungi o aggiorna la sezione **Dove ci siamo fermati** (data; **confermato**; **da confermare**, cioè le tue proposte non ancora approvate, scritte come «proposta, non confermata»; **da fare dopo**; nome proposto per il documento).
+2. Committi nel ramo del worktree, poi `ExitWorktree` con `keep`. Mai `remove`.
+3. Dici all'utente il percorso del worktree, il ramo e come riprendere: «riprendi l'esplorazione <tema>».
+
+**Riprendere** («riprendi l'esplorazione», «continua quella di ieri»): `git worktree list`, prendi i `explore-*`. Se è uno solo, entraci con `EnterWorktree` indicando il suo percorso; se sono più d'uno, mostra l'elenco (tema, data, ultimo commit) e chiedi quale. Leggi il documento, riassumi in tre righe **Dove ci siamo fermati** e riparti dal primo punto «da confermare». Non creare un worktree nuovo.
+
+Se l'utente dice «esploriamo» ma esistono già esplorazioni interrotte, dillo in una riga («c'è già quella su X, riprendiamo quella o ne apro una nuova?») prima di aprirne un'altra.
+
 Si apre una seconda sessione nel progetto e l'utente dice «esploriamo» (anche senza tema: nasce parlando). Tu, **senza chiedere nulla, nemmeno un nome**:
 1. Crei un worktree con `EnterWorktree`, `name: explore-AAAAMMGG-HHMM` (data e ora di adesso). Il prefisso `explore-` è ciò che attiva l'hook; il resto non conta. Il worktree ha memoria e cartella proprie: la sessione principale non è toccata.
 2. Esplori con le regole di `references/esplorazione.md` (leggile ora): sola lettura sul codice, appunti in chat. Salvi man mano nel documento (vedi il file): dopo ogni decisione e ogni blocco compiuto.
@@ -97,7 +107,7 @@ Si apre una seconda sessione nel progetto e l'utente dice «esploriamo» (anche 
 ### Importare le esplorazioni (nella sessione principale)
 Quando l'utente dice «importa le esplorazioni», e **proponilo tu** all'inizio di ogni chiusura ramo se ce ne sono:
 1. `git worktree list`: prendi i worktree in `.claude/worktrees/explore-*`; per ciascuno i commit non ancora nel ramo corrente (`git log HEAD..<ramo-del-worktree>`).
-2. Mostra l'elenco: tema, documento, numero di commit. Aspetta il via.
+2. Mostra l'elenco: tema, documento, numero di commit. Se il documento ha una sezione «Dove ci siamo fermati» con punti «da confermare», segnalalo: è un'esplorazione interrotta, non finita. Aspetta il via.
 3. `git cherry-pick` dei commit. Toccano solo `docs/explorations/`, quindi non confliggono col lavoro in corso. Se quei percorsi hanno modifiche non committate nel progetto principale, fermati e chiedi.
 4. Leggi «Voci per la roadmap» del documento e proponi le righe (di norma in **Idee**). Con il via le inserisci nella roadmap e segni il documento come «smistata».
 5. Chiedi se rimuovere il worktree e il suo ramo. Non farlo senza via.

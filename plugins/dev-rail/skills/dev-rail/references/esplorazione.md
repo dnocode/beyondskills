@@ -13,6 +13,7 @@ Una conversazione per **capire**, non per costruire. Il tema nasce dalle domande
 - Rispondi leggendo il codice e citando **file e riga**. Distingui sempre **verificato** (visto nel codice o nei dati), **ipotesi** (dedotto) e **non verificato**.
 - Per spiegare un meccanismo segui **un caso reale da cima a fondo**: chi agisce, cosa cambia nelle tabelle e negli stati, quali chiamate avvengono e in che ordine. Scene concrete, un passo alla volta; se l'utente dice di non aver capito, rifai la scena con altri esempi, non ripetere la spiegazione.
 - Le obiezioni si affrontano di petto: se l'utente ha ragione, dillo e correggi la spiegazione.
+- **Proposta o decisione?** Ciò che propone Claude e l'utente non ha ancora approvato si scrive come «proposta, non confermata», mai nella sezione Decisioni. Passa in Decisioni solo con il via dell'utente.
 - Tieni appunti aggiornati: **Capito**, **Problemi** (con evidenza), **Idee**, **Decisioni**, **Domande aperte**.
 - **Salva man mano, non solo alla fine.** Dopo ogni decisione dell'utente e dopo ogni blocco di lavoro compiuto, crea o aggiorna il documento in `docs/explorations/` (nome provvisorio, per esempio `bozza-AAAAMMGG-HHMM.md`; a fine sessione lo rinomini col tema, dopo il via dell'utente). Gli appunti solo in chat si perdono quando la conversazione viene compattata o chiusa. Le decisioni si scrivono nel documento subito, con la data.
 
@@ -52,6 +53,7 @@ Le voci per la roadmap non si scrivono nella roadmap: vanno in fondo al document
 4. **Passi proposti**: in ordine, con la dimensione di ciascuno, scritti in modo che una sessione di sviluppo possa trasformarli in progetto e piano.
 5. **Domande aperte.**
 6. **Voci per la roadmap.**
+7. **Dove ci siamo fermati** (solo se l'esplorazione è interrotta; si toglie alla chiusura): data, confermato, da confermare, da fare dopo, nome proposto per il documento.
 
 La roadmap riceve solo righe di rimando a questo documento: nessun dettaglio si perde, perché il dettaglio sta qui.
 
