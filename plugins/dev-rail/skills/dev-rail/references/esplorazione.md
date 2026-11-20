@@ -15,7 +15,7 @@ Una conversazione per **capire**, non per costruire. Il tema nasce dalle domande
 - Le obiezioni si affrontano di petto: se l'utente ha ragione, dillo e correggi la spiegazione.
 - **Proposta o decisione?** Ciò che propone Claude e l'utente non ha ancora approvato si scrive come «proposta, non confermata», mai nella sezione Decisioni. Passa in Decisioni solo con il via dell'utente, con le sue parole. Una frase dell'utente che è una domanda («è davvero utile?») non è una decisione.
 - Tieni appunti aggiornati: **Capito**, **Problemi** (con evidenza), **Idee**, **Decisioni**, **Domande aperte**.
-- **Salva man mano, non solo alla fine.** Dopo ogni decisione dell'utente e dopo ogni blocco di lavoro compiuto, crea o aggiorna il documento in `docs/explorations/` (nome provvisorio, per esempio `bozza-AAAAMMGG-HHMM.md`; a fine sessione lo rinomini col tema, dopo il via dell'utente). Gli appunti solo in chat si perdono quando la conversazione viene compattata o chiusa. Le decisioni si scrivono nel documento subito, con la data.
+- **Punti di salvataggio, non salvataggio continuo.** Gli appunti restano in chat finché non è passato abbastanza lavoro da temere di perderlo (più decisioni prese, un blocco di analisi compiuto, una conversazione lunga che rischia di essere compattata). Allora crei o aggiorni il documento in `docs/explorations/` (nome provvisorio, per esempio `bozza-AAAAMMGG-HHMM.md`; a fine sessione lo rinomini col tema, dopo il via dell'utente) e **lo rivedi con l'utente insieme alle decisioni**: gli leggi le Decisioni con le sue parole accanto, e lui conferma o corregge. Una decisione non confermata si scrive «proposta, non confermata». Non scrivere dopo ogni singola frase: scrivi quando il lavoro da salvare lo merita.
 
 ## Esplorare un bug
 
