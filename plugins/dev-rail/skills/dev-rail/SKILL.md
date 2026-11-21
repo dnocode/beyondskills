@@ -66,7 +66,7 @@ Così, se il sintomo ritorna, si trova subito cosa si era capito e cosa no. Senz
 
 ## 4. Quando si aggiorna
 
-- **Chiusura di un ramo** (obbligatorio, prima dell'unione): è un passo di `finishing-a-development-branch` di superpowers, dopo un piano eseguito, non un extra: prima di proporre unione o PR, scrivi le righe nel log e mostrale all'utente. Le voci chiuse passano dalla roadmap al log; ciò che è emerso entra in **Idee** con una riga di contesto. Lo fa la sessione che ha fatto il lavoro, mai quella di esplorazione.
+- **Chiusura di un ramo** (obbligatorio, prima dell'unione): vale per **ogni** ramo di lavoro, con o senza brainstorming e piano, anche se `finishing-a-development-branch` di superpowers non è mai partito. Quando stai per unire, aprire una PR, fare push del ramo o dire «fatto», scrivi prima le righe nel log e mostrale all'utente. Se il ramo non ha niente da loggare, dillo in una riga. Le voci chiuse passano dalla roadmap al log; ciò che è emerso entra in **Idee** con una riga di contesto. Lo fa la sessione che ha fatto il lavoro, mai quella di esplorazione.
 - **Chiusura di un bug**: la riga nel log si scrive quando la correzione è unita, non prima. Se la causa è solo un'ipotesi o la correzione non è provata dal vivo, nella roadmap resta una voce **DA APPROFONDIRE** con cosa controllare dopo il rilascio; si chiude (e si aggiorna la riga del log) quando l'esito è visto.
 - **Smistamento di un'esplorazione**: la roadmap riceve righe di rimando dopo il via dell'utente.
 - **Cambio di decisione**: la voce si aggiorna, con la data.
