@@ -65,7 +65,7 @@ Il documento è l'unico mezzo che arriva alla sessione di sviluppo: il worktree 
 
 1. **Chat → documento**: rileggi la conversazione e verifica che ogni decisione, esclusione e l'ordine dei passi siano nel documento.
 2. **Documento → coerenza**: rileggilo per intero e togli o correggi ciò che le decisioni hanno reso falso («da decidere» già deciso, «non confermato» già confermato, domande risolte, proposte finite tra le Decisioni).
-3. Leggi ad alta voce all'utente le sole Domande aperte rimaste.
+3. Leggi all'utente le Decisioni con le sue parole accanto, e lui conferma o corregge. Poi leggi le sole Domande aperte rimaste.
 
 Solo allora smista e rinomina. (Facoltativo: se l'utente ha espresso un principio non derivabile dal codice, per esempio «la complessità inutile si toglie», proponi una nota di memoria.)
 
